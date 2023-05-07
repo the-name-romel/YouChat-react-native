@@ -2,19 +2,17 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   TextInput,
   Image,
   SafeAreaView,
   TouchableOpacity,
   StatusBar,
-  Alert,
   KeyboardAvoidingView,
+  ScrollView,
 } from "react-native";
 import * as React from "react";
 import logo from "../assets/logo.png";
-import { ScrollView } from "react-native-gesture-handler";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebase";
 
 export default function Register({ navigation }) {
@@ -35,13 +33,12 @@ export default function Register({ navigation }) {
         console.log("Registration Successful. Please Login to proceed");
         console.log(user);
         if (user) {
-          auth()
-            .currentUser.updateProfile({
-              displayName: name,
-              photoURL:
-                image ||
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/2048px-Missing_avatar.svg.png",
-            })
+          updateProfile(user.user, {
+            displayName: name,
+            photoURL:
+              image ||
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/2048px-Missing_avatar.svg.png",
+          })
             .then(() => navigation.replace("Home"))
             .catch((error) => {
               alert(error);
