@@ -45,8 +45,6 @@ export default function Login({ navigation }) {
 
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
-        console.log(user);
-        // If server response message same as Data Matched
         if (user) navigation.replace("Home");
       })
       .catch((error) => {

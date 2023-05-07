@@ -30,8 +30,6 @@ export default function Register({ navigation }) {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((user) => {
-        console.log("Registration Successful. Please Login to proceed");
-        console.log(user);
         if (user) {
           updateProfile(user.user, {
             displayName: name,
