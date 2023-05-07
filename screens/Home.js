@@ -11,7 +11,7 @@ import CustomListItem from "../components/CustomListItem";
 import { AntDesign } from "@expo/vector-icons";
 import { Avatar } from "@rneui/base";
 import { auth, db } from "../firebase";
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 
 const Home = ({ navigation }) => {
   const [chats, setChats] = useState([]);
