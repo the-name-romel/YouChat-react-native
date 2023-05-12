@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import * as React from "react";
 import { Button, Input } from "@rneui/base";
 import { AntDesign } from "@expo/vector-icons";
@@ -33,7 +33,21 @@ const AddChat = ({ navigation }) => {
         leftIcon={<AntDesign name="wechat" size={24} />}
         style={{ paddingHorizontal: 4 }}
       />
-      <Button onPress={createChat} title="Create new Chat" />
+      <TouchableOpacity
+        style={{
+          backgroundColor: "#D8BFD8",
+          height: 58,
+          borderRadius: 10,
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: 40,
+        }}
+        onPress={createChat}
+      >
+        <Text style={{ fontWeight: "bold", color: "#black", fontSize: 18 }}>
+          Create new chat
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
