@@ -43,8 +43,10 @@ const AddChat = ({ navigation }) => {
           marginTop: 40,
         }}
         onPress={createChat}
+        activeOpacity={0.5}
+        disabled={!input}
       >
-        <Text style={{ fontWeight: "bold", color: "#black", fontSize: 18 }}>
+        <Text style={{ fontWeight: "bold", color: "black", fontSize: 18 }}>
           Create new chat
         </Text>
       </TouchableOpacity>
