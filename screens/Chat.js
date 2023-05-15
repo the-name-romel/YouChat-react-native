@@ -37,7 +37,7 @@ const Chat = ({ navigation, route }) => {
           <Avatar
             rounded
             source={{
-              uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/2048px-Missing_avatar.svg.png",
+              uri: messages[messages.length - 1]?.data.photoURL,
             }}
           />
           <Text style={{ marginLeft: 10, fontWeight: 700 }}>
@@ -46,7 +46,7 @@ const Chat = ({ navigation, route }) => {
         </View>
       ),
     });
-  }, []);
+  }, [navigation, messages]);
 
   const sendMessage = async () => {
     Keyboard.dismiss();
