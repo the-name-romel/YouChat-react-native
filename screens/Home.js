@@ -56,9 +56,6 @@ const Home = ({ navigation }) => {
             gap: 10,
           }}
         >
-          <TouchableOpacity>
-            <AntDesign name="camerao" size={24} color={"black"} />
-          </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate("AddChat")}>
             <AntDesign name="pluscircleo" size={24} color={"black"} />
           </TouchableOpacity>
