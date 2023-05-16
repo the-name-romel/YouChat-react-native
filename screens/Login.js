@@ -7,11 +7,11 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
-  StatusBar,
   Alert,
   KeyboardAvoidingView,
   ScrollView,
 } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 import logo from "../assets/logo.png";
 import { auth } from "../firebase";
@@ -118,7 +118,7 @@ export default function Login({ navigation }) {
           </SafeAreaView>
         </KeyboardAvoidingView>
       </ScrollView>
-      <StatusBar barStyle="light-content" />
+      <StatusBar style="auto" />
     </View>
   );
 }

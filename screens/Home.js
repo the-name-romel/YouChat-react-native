@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import CustomListItem from "../components/CustomListItem";
 import { AntDesign } from "@expo/vector-icons";
@@ -73,6 +74,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar style="auto" />
       <ScrollView>
         {chats.map(({ id, chatData: { chatName } }) => (
           <CustomListItem

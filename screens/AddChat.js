@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import * as React from "react";
 import { Button, Input } from "@rneui/base";
 import { AntDesign } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
@@ -26,6 +27,7 @@ const AddChat = ({ navigation }) => {
 
   return (
     <View style={{ padding: 30 }}>
+      <StatusBar style="auto" />
       <Input
         value={input}
         onChangeText={(text) => setInput(text)}

@@ -6,10 +6,10 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
-  StatusBar,
   KeyboardAvoidingView,
   ScrollView,
 } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 import logo from "../assets/logo.png";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -133,7 +133,7 @@ export default function Register({ navigation }) {
           </SafeAreaView>
         </KeyboardAvoidingView>
       </ScrollView>
-      <StatusBar barStyle="light-content" />
+      <StatusBar style="auto" />
     </View>
   );
 }
