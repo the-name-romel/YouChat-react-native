@@ -1,7 +1,3 @@
-// #6 Email Authentication using Firebase Authentication in React Native App
-// https://aboutreact.com/react-native-firebase-authentication/
-
-// Import React and Component
 import React, { useState, useEffect } from "react";
 import {
   SafeAreaView,
